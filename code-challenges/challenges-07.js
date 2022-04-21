@@ -21,11 +21,23 @@
 //  2- The first letters of the firstName and lastName should be capital letter
 
 const objLat = (obj) => {
-  let sentence = `my name is ${
-    obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1)
-  } ${obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1)} I am ${
-    obj.age
-  } YO, and I love ${obj.hobby}.`;
+  let first_name_first_letter = obj.firstName[0].toUpperCase();
+  let last_name_first_letter = obj.lastName[0].toUpperCase();
+  let tempArray = [];
+  let newFirstName = "";
+  let newLastName = "";
+  for (let i = 1; i < obj.firstName.length; i++) {
+    tempArray.push(obj.firstName[i]);
+    newFirstName += obj.firstName[i];
+  }
+  for (let i = 1; i < obj.lastName.length; i++) {
+    tempArray.push(obj.lastName[i]);
+    newLastName += obj.lastName[i];
+  }
+
+  let sentence = `my name is ${first_name_first_letter + newFirstName} ${
+    last_name_first_letter + newLastName
+  } I am ${obj.age} YO, and I love ${obj.hobby}.`;
   return sentence;
 };
 // -------------------------------------------------------------------------------------------------------
