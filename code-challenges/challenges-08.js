@@ -115,8 +115,6 @@ const getInfo = (arr) => {
     for (let students in object) {
       if (students == "Students") {
         newArr.push(object[students]);
-        console.log(newArr);
-
         for (let i of newArr[0]) {
           studentsName.push(i);
         }
