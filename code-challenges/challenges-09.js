@@ -144,7 +144,7 @@ const mostExpensive = (budget, mouseArray, keyBoardArray) => {
     keyBoardArray.forEach((KeyBoredElement) => {
       if (
         MouseElement + KeyBoredElement <= budget &&
-        MouseElement + KeyBoredElement>saveNewCollection
+        MouseElement + KeyBoredElement > saveNewCollection
       ) {
         saveNewCollection = MouseElement + KeyBoredElement;
       }
